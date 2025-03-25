@@ -3,11 +3,11 @@ class Solution {
     public double solution(int[] arr) {
         double answer = 0; 
         
-        for(int i = 0; i<arr.length; i++){
-            answer += arr[i];
-        }
+//         for(int i = 0; i<arr.length; i++){
+//             answer += arr[i];
+//         }
         
-        answer = answer/arr.length;
-        return answer;
+//        answer = answer/arr.length;
+        return Arrays.stream(arr).average().orElse(0);
     }
 }
