@@ -1,0 +1,4 @@
+-- 코드를 입력하세요
+SELECT o.ANIMAL_ID,o.NAME FROM ANIMAL_INS a
+right join ANIMAL_OUTS o on a.ANIMAL_ID = o.ANIMAL_ID 
+WHERE a.ANIMAL_ID is NULL;
