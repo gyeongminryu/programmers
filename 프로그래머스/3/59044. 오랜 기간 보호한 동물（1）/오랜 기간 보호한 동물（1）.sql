@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+
+
+-- right join 해서 null인 것들 중 DATETIME에 ORDERBY DESC, LIMIT 3
+
+SELECT i.NAME, i.DATETIME FROM ANIMAL_INS i 
+Left join ANIMAL_OUTS o on i.ANIMAL_ID = o.ANIMAL_ID
+WHERE o.ANIMAL_ID is null
+ORDER BY i.DATETIME ASC LIMIT 3;
