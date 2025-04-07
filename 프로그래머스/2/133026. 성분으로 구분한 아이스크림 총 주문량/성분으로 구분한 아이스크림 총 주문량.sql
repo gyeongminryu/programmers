@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+-- 아이스크림 성분 타입 
+-- 성분 타입에 대한 아이스크림 총 주문량 
+-- 총 주문량이 작은 순서대로 조회 
+SELECT i.INGREDIENT_TYPE AS INGREDIENT_TYPE, SUM(f.TOTAL_ORDER) AS TOTAL_ORDER
+FROM FIRST_HALF f
+JOIN ICECREAM_INFO i on i.FLAVOR = f.FLAVOR
+GROUP BY i.INGREDIENT_TYPE
+ORDER BY TOTAL_ORDER;
